@@ -10,7 +10,7 @@ function MovieItem({movie}){
 			<a href={movie.face}><img src={movie.face} alt={movie.title} className="movie-face"/></a>
 			<div className="movie-info">
 				<h3 className="movie-title">{movie.title}</h3>
-				{movie.tags.map((tag, index)=>{
+				{movie.tags!=null && movie.tags.map((tag, index)=>{
 					var bg;
 					if (!bgObj.hasOwnProperty(tag)) {
 						bg = bgObj[tag] = (bgColors.length>0 && bgColors.pop())|| 'yellowgreen';

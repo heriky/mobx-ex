@@ -10,7 +10,8 @@ class SearchInput extends Component{
   handleOnclick(e){
     this.props.rippleAnim(e, ()=>{
       console.log('ripple动画完成后执行回调。', this);
-      this.props.onClick(this.input.value);
+      // this.props.onClick(this.input.value);
+      this.props.store.fetchMovies(this.input.value)
     })
   }
 
